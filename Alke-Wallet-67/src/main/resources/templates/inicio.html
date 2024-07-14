@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="../static/css/login.css" th:href="@{/css/inicio.css}"/>
+</head>
+<body>
+<h1>Alke Wallet</h1>
+<div class="container">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <form th:action="@{/}" method="post" th:object="${user}"  class="container m-3 p-3">
+
+                <select class="form-select" aria-label="Default select example" name="usuarioId">
+                    <option selected>Seleccione Usuario</option>
+                    <option th:each="usuario: ${usuarios}" th:value="${usuario.usuarioId}" th:text="${usuario.nombre}"></option>
+                </select>
+
+                <input type="submit" value="Ingresar" class="btn btn-primary">
+
+            </form>
+
+            <form th:action="@{/registrar}"  method="get">
+                <input type="submit" value="Registrar" class="btn btn-primary">
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+<footer class="mt-5 mr-0">
+    <p>Alke Wallet ©. Proyecto Talento Digital
+        <br>
+        Alumno Joaquín Gallardo</p>
+    <div class="mail"><a href="https://www.gmail.com/" target="\_blank"><img src="../static/IMG/gmail.jpg" th:src="@{/IMG/gmail.jpg}" class="rounded-circle" alt="img" width="50" height="50" ></a></div>
+    <div class="whatsapp"><a href="https://web.whatsapp.com/" target="\_blank"><img src="../static/IMG/whatsapp.jpg" th:src="@{/IMG/whatsapp.jpg}" class="rounded-circle" alt="img" width="50" height="50" ></a></div>
+    <div class="instagram"><a href="https://www.instagram.com/" target="_blank"><img src="../static/IMG/insta.jpg" th:src="@{/IMG/insta.jpg}" class="rounded-circle" alt="img" width="50" height="50" ></a></div>
+
+</footer>
+
+
+</body>
+</html>

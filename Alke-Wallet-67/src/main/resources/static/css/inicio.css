@@ -1,0 +1,69 @@
+/*style.css*/
+
+body{
+     /*background: url('../IMG/login-landscape2.jpg');
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-attachment: fixed;*/
+    background: rgb(252,254,255);
+    background: linear-gradient(90deg, rgba(252,254,255,1) 35%, rgba(25,32,109,1) 99%);
+  }
+
+  h1 {
+  text-align: center;
+  color: navy !important;
+  }
+
+.container{
+
+display:flex;
+flex-direction: column;
+align-items: center;
+}
+
+.card{
+background-color:lightgray !important;
+border: 5px linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(30,30,111,1) 66%, rgba(0,212,255,1) 100%); !important;
+}
+
+.card-body {
+display:flex;
+flex-direction: column;
+align-items: center;
+  }
+
+
+
+
+.form-select{
+margin-bottom: 30px;
+}
+
+ .btn.btn-primary {
+    color: rgb(173, 212, 240);
+    background: #142d7c;
+    border: 1px;
+    border-radius: 1px;
+    padding: 5px 15px;
+    width: 222.83px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+   footer  {
+                color: /*rgb(173, 212, 240)*/ navy;
+                background-color: transparent;
+                padding: 15px;
+                justify-content:space-between;
+                width:100%;
+                display: flex;
+                align-self: flex-end;
+                position: fixed;
+                bottom:0;
+                margin-top: 10%;
+            }
